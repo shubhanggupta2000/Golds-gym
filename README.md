@@ -10,6 +10,6 @@ With the functionality to choose exercise categories and specific muscle groups,
 
 # Glimpse 
 
-![Screenshot from 2022-06-16 18-10-30](https://user-images.githubusercontent.com/79959361/174071955-451605c1-c2e9-437d-b692-709bab819d5c.png)
+![Screenshot from 2023-04-03 17-41-48](https://user-images.githubusercontent.com/79959361/229505531-65c38ae3-81d4-4ce1-bc25-b44bcec9fccd.png)
 
 ![Screenshot from 2022-06-16 18-11-13](https://user-images.githubusercontent.com/79959361/174071974-ed32c5e4-d77a-4886-bfb7-d797a2d1b562.png)
