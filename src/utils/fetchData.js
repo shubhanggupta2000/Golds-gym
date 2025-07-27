@@ -29,3 +29,17 @@ export const fetchData = async (url, options) => {
     throw error;
   }
 };
+
+export const fetchExerciseImage = async (exerciseId, resolution = 1080) => {
+  const url = `https://exercisedb.p.rapidapi.com/image?resolution=${resolution}&exerciseId=${exerciseId}`;
+  const response = await fetch(url, {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": process.env.REACT_APP_RAPID_API_KEY,
+      "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
+    },
+  });
+  if (!response.ok) throw new Error("Image fetch failed");
+  const blob = await response.blob();
+  return URL.createObjectURL(blob);
+};

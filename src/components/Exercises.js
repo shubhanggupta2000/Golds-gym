@@ -36,9 +36,8 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
   const indexOfLastExercise = currentPage * exercisesPerPage;
   const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
   const currentExercises = Array.isArray(exercises)
-  ? exercises.slice(indexOfFirstExercise, indexOfLastExercise)
-  : [];
-
+    ? exercises.slice(indexOfFirstExercise, indexOfLastExercise)
+    : [];
 
   const paginate = (event, value) => {
     setCurrentPage(value);
@@ -69,15 +68,28 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
         ))}
       </Stack>
       <Stack sx={{ mt: { lg: "114px", xs: "70px" } }} alignItems="center">
-        {exercises.length > 9 && (
+        {exercises.length > exercisesPerPage && (
           <Pagination
-            color="standard"
+            color="primary"
             shape="rounded"
             defaultPage={1}
             count={Math.ceil(exercises.length / exercisesPerPage)}
             page={currentPage}
             onChange={paginate}
-            size="large"
+            size="small"
+            sx={{
+              "& .MuiPaginationItem-root": {
+                minWidth: "32px",
+                height: "32px",
+                fontSize: "16px",
+                borderRadius: "8px",
+              },
+              "& .Mui-selected": {
+                backgroundColor: "#FF2625",
+                color: "#fff",
+              },
+              mt: 2,
+            }}
           />
         )}
       </Stack>
